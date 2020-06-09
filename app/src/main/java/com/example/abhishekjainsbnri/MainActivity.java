@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity  {
         rView.setLayoutManager(new LinearLayoutManager(this));
         rView.setHasFixedSize(true);
 
-        dataBase = MainDatabase.getDb(this);
-        mainDAO = dataBase.getTodoDao();
+        //dataBase = MainDatabase.getDb(this);
+        //mainDAO = dataBase.getTodoDao();
         MainDatabase.setContext(this);
 
         //CardRepository cardRepository= ViewModelProviders.of(this).get(CardRepository.class);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity  {
             Log.e("cardViewModel.class","able  "+allDetails.size());
 
             cardListAdapter.submitList(allDetails);
-            mainDAO.insertWholeData(createList(allDetails));
+            //mainDAO.insertWholeData(createList(allDetails));
         });
         rView.setAdapter(cardListAdapter);
 
@@ -68,13 +68,7 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-    private List<AllDetailTableData> createList(PagedList<AllDetail> allDetails) {
-        List<AllDetailTableData> allDetailTableData= new ArrayList<>();
-        for(AllDetail a:allDetails){
-            allDetailTableData.add(new AllDetailTableData(a));
-        }
-        return allDetailTableData;
-    }
+
 
 
 }

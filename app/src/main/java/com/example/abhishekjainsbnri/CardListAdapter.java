@@ -54,13 +54,13 @@ public class CardListAdapter  extends PagedListAdapter<AllDetail,CardViewHolder>
         AllDetail allDetail= getItem(position);
         if (allDetail != null) {
             holder.name.setText(allDetail.getName());
-            if(!allDetail.getDescription().equals("")){
+            if(allDetail.getDescription()!=null&&!allDetail.getDescription().equals("")){
                 holder.des.setText(allDetail.getDescription());
             }else{
                 holder.des.setText("N.A.");
             }
             holder.open_count.setText(""+allDetail.getOpen_issues_count());
-            if(allDetail.getLicense().getName()!=null&&!allDetail.getLicense().getName().equals("")){
+            if(allDetail.getLicense()!=null&&allDetail.getLicense().getName()!=null&&!allDetail.getLicense().getName().equals("")){
                 holder.lic.setText(allDetail.getLicense().getName());
             }else{
                 holder.lic.setText("N.A.");
