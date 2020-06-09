@@ -7,8 +7,8 @@
 3. Screen orientation handled (new landscape layout) 
 4. Pagination added to allow user load more result
 5. Store the data using ROOM
-6. First data from room will be loaded and if there are more to be loaded and Nwtwork is there then api will loaded it
-7. open_issues_count, license, permissions, name and description field addded for each cell in the recycler view
+6. First data from room will be loaded and if there are more to be loaded and Network is there then api will loaded it
+7. open_issues_count, license, permissions, name and description field added for each cell in the recycler view
 8. Taken cared for "null" , true, false values in API and show them appropriately
 
 
